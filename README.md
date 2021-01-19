@@ -13,7 +13,7 @@ TFH-2020 (Chen et al. 2020) is selected as the empirical study to demonstrate th
 
 # Codes
 The source codes are in the current main directory.   
-    ```
+```
     BiGRU-HAN-GCN
     ├── ...
     ├── demo
@@ -23,7 +23,7 @@ The source codes are in the current main directory.
         	├── __init__.py                    
         	└── inits.py                       
         	└── layers.py                   # GCN layer
-        	└── metrics.py                  # evaluation with Pre/Rec/F1
+        	└── metrics.py                  # evaluation
         	└── models.py                   # base model
         	└── network_BiGRU-HAN-GCN.py    # BiGRU-HAN-GCN model
         └── utils            
@@ -31,9 +31,9 @@ The source codes are in the current main directory.
             ├── initial.py     
             ├── plot_pr.py                  # plot evaluation curve
             ├── preprocessData.py           # pre-proprocess Data
-            ├── preprocessData.py           # generate Data for training
+            ├── preprocessData.py           # generate
             └── utils.py                    # basic utilities
-    ```
+```
 
 # Requirements
 - Python (>=2.7)
