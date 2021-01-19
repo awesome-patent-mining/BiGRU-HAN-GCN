@@ -8,14 +8,32 @@ The experimental results show that the new framework is capable of benefiting fr
 
 ![](./images/f1.png)
 
-
-
-
 # Data
-TFH-2020 (Chen et al. 2020) is selected as the empirical study to demonstrate the method. This is an annotated corpus of 1010 patent abstracts pertaining to *thin film head* technology in hard-disk. To describe the elements of the inventions and working mechanisms with structured information, a well-crafted information schema is used for patent annotation containing 17 types of entities and 15 types of semantic relations.
+TFH-2020 (Chen et al. 2020) is selected as the empirical study to demonstrate the method. This is an annotated corpus of 1010 patent abstracts pertaining to *thin film head* technology in hard-disk. To describe the elements of the inventions and working mechanisms with structured information, a well-crafted information schema is used for patent annotation containing 17 types of entities and 15 types of semantic relations.  
 
 # Codes
-The source codes are in the current main directory. `network-BiGRU-HAN-GCN.py` contains the whole neural network's defination.
+The source codes are in the current main directory.   
+    ```
+    BiGRU-HAN-GCN
+    ├── ...
+    ├── demo
+    └── code
+    	├── tf_metrics                        
+        └── model                           # model codes
+        	├── __init__.py                    
+        	└── inits.py                       
+        	└── layers.py                   # GCN layer
+        	└── metrics.py                  # evaluation with Pre/Rec/F1
+        	└── models.py                   # base model
+        	└── network_BiGRU-HAN-GCN.py    # BiGRU-HAN-GCN model
+        └── utils            
+            ├── __init__.py    
+            ├── initial.py     
+            ├── plot_pr.py                  # plot evaluation curve
+            ├── preprocessData.py           # pre-proprocess Data
+            ├── preprocessData.py           # generate Data for training
+            └── utils.py                    # basic utilities
+    ```
 
 # Requirements
 - Python (>=2.7)
@@ -32,20 +50,7 @@ will be updated soon ...
 
 
 # Reference
-Chen, L., Xu S., Zhu L., Zhang J., Lei X., & Yang G. (2020). A deep learning based method for extracting semantic information from patent documents. Scientometrics, 125(1), 289–312.
-
-Xu, S., Zhai, D., Wang, F. An, X., Pang, H., and Sun, Y. (2019). A Novel Method for Topic Linkages between Scientific Publications and Patents. Journal of the Association for Information Science and Technology, 70(9), 1026-1042. 
-
-Xu, S., Li, L., An, X., Hao, L., and Yang, G. (2020). An Approach for Detecting the Commonality and Specialty between Scientific Publications and Patents. Scientometrics. 
-
-Xu, S., Zhu, L., Qiao, X. and Xue, C. (2009). A Novel Approach for Measuring Chinese Terms Semantic Similarity based on Pairwise Sequence Alignment. In Proceedings of the 5th International Conference on Semantics, Knowledge and Grid, pp. 92-98. 
-
-Kipf, T. N., & Welling, M. (2016). Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.
-
-[Han](https://arxiv.org/search/cs?searchtype=author&query=Han%2C+X), X., [Gao](https://arxiv.org/search/cs?searchtype=author&query=Gao%2C+T), T., [Yao](https://arxiv.org/search/cs?searchtype=author&query=Yao%2C+Y),Y., [Ye](https://arxiv.org/search/cs?searchtype=author&query=Ye%2C+D),D., [Liu](https://arxiv.org/search/cs?searchtype=author&query=Liu%2C+Z),Z., & [Sun](https://arxiv.org/search/cs?searchtype=author&query=Sun%2C+M), M.(2019). OpenNRE: An Open and Extensible Toolkit for Neural Relation Extraction. arXiv preprint arXiv: 1301.3781
-
-https://github.com/awesome-patent-mining/TFH_Annotated_Dataset
-
-https://github.com/squirrel1982/TensorFlow-NRE
-
-https://github.com/tkipf/gcn
+Chen, L., Xu S., Zhu L., Zhang J., Lei X., & Yang G. (2020). A deep learning based method for extracting semantic information from patent documents. Scientometrics, 125(1), 289–312.  
+https://github.com/awesome-patent-mining/TFH_Annotated_Dataset  
+https://github.com/squirrel1982/TensorFlow-NRE  
+https://github.com/tkipf/gcn  
